@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>操作元素的内容</title>
+    <script type="text/javascript">
+        //获取元素内容
+        function getContext(){
+            //获取元素对象
+                 var div = document.getElementById("div01");
+            //获取元素内容
+            alert(div.innerHTML);
+            alert(div.innerText);
+        }
+        //修改元素内容
+               function updateContesxt(){
+                   //获取元素对象
+                    var div = document.getElementById("div01");
+                   //修改元素对象内容
+                    div.innerHTML="<b>修改你</b>";
+               }
+               function updateContesxt2(){
+            //获取元素对象
+            var div = document.getElementById("div01");
+            //修改元素对象内容
+            div.innerText="<b>修改你</b>";
+          }
+
+
+    </script>
+
+
+
+    <style type="text/css">
+        #div01{
+            width: 200px;
+            height: 200px;
+            border: solid 1px orange;
+
+        }
+    </style>
+</head>
+<body>
+<h3>操作元素的内容</h3>
+<input type="button" value="测试获取元素内容--innerHTML+innerText" onclick="getContext()">
+<input type="button" value="测试修改元素内容--innerHTML=内容" onclick="updateContesxt()">
+<input type="button" value="测试修改元素内容--innertext=内容" onclick="updateContesxt2()">
+<hr>
+<div id="div01">
+         <b>测试测试，生病学习</b>
+         <b>测试测试，生病学习</b>
+
+</div>
+</body>
+</html>

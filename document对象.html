@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+         //document获取元素对象
+                   //直接方式
+                          function testGetEleById(){
+                            var i= window.document.getElementById("uname");   //id方式
+                              alert(i)
+                          }
+                          function testGetEleByName(){
+                                 var  favs= document.getElementsByName("fav");  //name方式
+                                 alert(favs);
+                          }
+                          function testGetEleByTagName(){
+                              var inps = document.getElementsByTagName("input");//标签名方式
+                              alert(inps)
+                          }
+                         function testGetEleByClassName(){
+                             var a= document.getElementsByClassName("common");  //class属性
+                             alert(a);
+                         }
+                   //间接获取方式
+                           //父子关系
+                         function testParent(){
+                             //获取父级元素对象
+                             var showdiv = document.getElementById("showdiv");
+                             //获取所有的子元素对象数组
+                             var childs = showdiv.childNodes;
+                             alert(childs.length);
+                         }
+                           //子父关系
+                               function testChild(){
+                                   //获取子元素对象
+                                        var inp=document.getElementById("inp");
+                                        var div = inp.parentNode;
+                                        alert(div);
+                               }
+                          //兄弟关系
+                                function testBrother(){
+                                    //兄弟取弟
+                                      var inp = document.getElementById("inp");
+                                    var preEle = inp.previousSibling; //弟获取兄
+                                    var nextEle = inp.nextSibling      //兄获取弟
+                                    alert(preEle+":::"+nextEle)
+                                }
+    </script>
+<style type="text/css">
+.common{
+
+}
+#showdiv{
+    border: solid 1px orange;
+    width: 300px;
+    height: 300px;
+
+}
+</style>
+
+</head>
+<body>
+    <h3>document</h3>
+   <hr>
+<input type="button" name="" id="" value="测试获取HTML元素对象--id" onclick="testGetEleById()">
+<input type="button" name="" id="" value="测试获取HTML元素对象--name" onclick="testGetEleByName()">
+<input type="button" name="" id="" value="测试获取HTML元素对象--TagName" onclick="testGetEleByTagName()">
+<input type="button" name="" id="" value="测试获取HTML元素对象--ClassName" onclick="testGetEleByClassName()">
+<hr>
+用户名：<input type="text" name="uname" id="uname" value="">
+密码：<input type="text" name="pasword" id="pasword" value="">
+    <hr>
+<input type="checkbox" name="fav" id="fav" class="common"/>唱歌
+<input type="checkbox" name="fav" id="fav1" class="common"/>跳舞
+<input type="checkbox" name="fav" id="fav2"/>睡觉
+<input type="checkbox" name="fav" id="fav3"/>打游戏
+<hr>
+间接获取方式：<br>
+    <input type="button" value="测试父子关系" onclick="testParent()">
+    <input type="button" value="测试子父关系" onclick="testChild()">
+    <input type="button" value="测试兄弟关系" onclick="testBrother()">
+<div id="showdiv">
+        <input type="" name="" id="" value="">
+        <input type="" name="" id="inp" value="">
+        <input type="" name="" id="" value="">
+        <input type="" name="" id="" value="">
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+          //框体方法学习:
+                     //警告框
+                     function testAlert(){
+                           window.alert("我是警告框")
+                     }
+                     //确认框
+                     function testConfirm(){
+                         window.confirm("你确定要删除吗");
+                     }
+                     //提示框
+                     function testPromt(){
+                         window.prompt("请输入昵称");
+                     }
+        //定时执行
+          var idi;
+          var ids
+                  function testSetTimeout(){
+                   idi =   window.setTimeout(
+                              function () {
+                                  alert("我是的定时执行");
+                              },3000
+                      );
+                  }
+
+         //间隔执行
+                   function testSetInterval(){
+                      ids= window.setInterval(
+                               function(){
+                                   alert("我是间隔执行");
+                               },2000
+                       );
+                   }
+        //停止当前的定时方法
+                   function testClearTimeout(){
+                      window.clearTimeout(idi);
+                   }
+                   function testClearInterval(){
+                       window.clearInterval(ids);
+                   }
+         //子页面方法
+                  function testOpen(){
+                      window.open('c1.html','newwindow','height=400,width=600,top=100px,left:320px,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes,location=yes,status=yes');
+                  }
+        //子页面调用父页面的函数
+         function testFather(){
+             alert("父页面");
+         }
+        /*-----------------------------------------------------------------------------*/
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+          <input type="button" value="测试警告框" onclick="testAlert()">
+          <input type="button" value="测试确认框" onclick="testConfirm()">
+          <input type="button" value="测试提示框" onclick="testPromt()">
+          <input type="button" value="测试提示框" onclick="testPromt()">
+          <hr>
+          <input type="button" value="测试setTimeout--定时执行" onclick="testSetTimeout()">
+          <input type="button" value="测试setinterval--间隔执行" onclick="testSetInterval()">
+          <input type="button" value="停止指定的定时器" onclick="testClearTimeout()">
+          <input type="button" value="停止指定的间隔器" onclick="testClearInterval()">
+          <hr>
+          <input type="button" value="测试子页面" onclick="testOpen()">
+             <b> </b>
+
+
+
+</body>
+</html>

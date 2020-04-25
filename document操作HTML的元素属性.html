@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+<script type="text/javascript">
+           //声明函数
+                   //获取属性值
+               function testFieid(){
+                 //获取元素对象
+                  var inp=  document.getElementById("uname");
+                 //获取元素属性值
+                   alert(inp.type+":"+inp.name+":"+inp.id+":"+inp.value);
+               }
+
+                 //修改元素属性
+           function testFieid2() {
+               //获取元素对象
+               var inp=  document.getElementById("uname");
+               //修改元素属性
+               inp.value = "修改元素属性";
+               inp.type = "button";
+           }
+            //声明函数-----自定义属性
+                //获取
+                 function testOwnField(){
+                   //获取元素对象
+                      var inp = document.getElementById("uname");
+                   //获取固有属性的值
+                      alert(inp.getAttribute("abc"));
+               }
+               //修改
+                 function testOwnField2(){
+                        //获取元素对象
+                     var inp = document.getElementById("uname");
+                       //获取固有属性的值
+                        inp.setAttribute("abc","修改自定义");
+                     }
+           //使用自定义方式操作固有属性
+                 function testOper(){
+                     //获取元素对象
+                         var inp = document.getElementById("uname");
+                     //操作对象属性
+                        alert(inp.getAttribute("type"));
+                        alert(inp.getAttribute("value"));
+                 }
+
+</script>
+</head>
+
+<body>
+<h3>js操作HTML的元素属性</h3>
+<input type="button" name="" value="测试获取元素属性--固有" onclick="testFieid()">
+<input type="button" name="" value="测试修改元素属性--固有" onclick="testFieid2()">
+<input type="button" name="" value="测试获取元素属性--自定义" onclick="testOwnField()">
+<input type="button" name="" value="测试修改元素属性--修改自定义" onclick="testOwnField2()">
+<input type="button" name="" value="测试操作元素自定义操作固有属性" onclick="testOper()">
+<hr>
+用户名：<input type="text" name="uname" id="uname" value="" abc="自定义">
+
+</body>
+</html>

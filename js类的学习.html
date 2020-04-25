@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+        function Persion(name,age){
+            this.name=name;
+            this.age=age;
+            this.text=function(a){
+                alert(a);
+            }
+        }
+          Persion.prototype.test = function(){
+              alert("嘿嘿");
+          }
+        var p1= new Persion("张三",32);
+        var p2= new Persion("张三",32);
+        alert(p1.name)
+
+        alert(p1.test===p2.test)
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

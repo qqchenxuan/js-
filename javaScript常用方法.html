@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        //String对象
+        function testString(){
+            //创建字符串
+            var str="abcd"
+                //大小写转换
+                     alert("大写："+str.toUpperCase()+"小写："+str.toLowerCase());
+               //字符串截取
+                      alert("指定位置,指定结束长度:"+str.substr(0,1)+"指定位置，指定结束位置："+str.substring(0,1))
+                   //首字母大写：
+                   alert(str.substr(0,1).toUpperCase()+str.substr(1,str.length))
+        }
+        //Date对象
+        function testDate(){
+             //创建日期对象
+              var d=new Date();
+            //操作时间日期对象
+                       //获取年份
+                     alert(d.getYear());  //返回从1900年起算距今的年份数
+                    alert(d.getFullYear());//返回当前的年份
+                       //获取月份
+                        alert(d.getMonth()+1);//获取当前月份 （注意：要加1，    外国从0开始）
+                       //获取日期
+                       alert(d.getDate());//返回当前日期
+                         //获取星期数
+                          alert(d.getDay());  //  星期日返回的是0
+                         //获取分钟数
+                        alert(d.getMinutes());//返回当前的分钟数
+                       //获取秒数
+                         alert(d.getSeconds());//返回当前秒数
+
+        }
+        //Math对象
+        function testMath(){
+                      //随机数字
+                  alert(Math.floor(Math.random()*9000+1000))
+        }
+        //Global对象
+             function testGlobal(){
+                 //eval方法     将字符串转换为js代码
+                 eval("var a=123;")
+                 alert(a)
+                 //isNaN
+                 if(!isNaN(a)){
+                       alert("整数")
+                 }else{
+                     alert("不是整数")
+                 }
+             }
+
+
+    </script>
+
+
+
+</head>
+<body>
+<h3>常用方法</h3>
+
+<input type="button" id="" value="测试String对象" onclick="testString()">
+<input type="button" id="" value="测试Date对象" onclick="testDate()">
+<input type="button" id="" value="测试Math对象" onclick="testMath()">
+<input type="button" id="" value="测试Global对象" onclick="testGlobal()">
+
+</body>
+</html>

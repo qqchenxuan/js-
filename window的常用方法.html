@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        //1、地址栏属性学习----location
+        function testLocation(){
+            window.location.href="http://www.qqchenxuan.com";             //跳转
+
+        }
+        function testLocation2(){
+            window.location.reload();               //刷新
+        }
+        //2、历史记录属性
+              function testHistory(){
+               window.history.forward();     //前进
+
+              }
+
+        //3、屏幕属性学习
+          function testScreen(){
+              var x=window.screen.width;
+              var y=window.screen.height;
+              alert(x+":"+y)
+          }
+        //4、浏览器配置属性
+         function testNa(){
+             alert(window.navigator.userAgent);
+         }
+    </script>
+
+
+</head>
+<body>
+                 <h3>window常用方法</h3>
+      <hr/>
+                 <input type="button" value="测试地址栏属性--location" onclick="testLocation()">
+                 <input type="button" value="测试地址栏属性--location-重新加载" onclick="testLocation2()">
+               <hr>
+                <input type="button" value="测试历史记录属性--history-前进" onclick="testHistory()">
+                 <hr>
+                 <input type="button" value="测试屏幕属性--scteen" onclick="testScreen()">
+                 <hr>
+                 <input type="button" value="测试浏览器配置属性--navigator" onclick="testNa()">
+</body>
+</html>
