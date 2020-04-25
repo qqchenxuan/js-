@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+       //创建函数进行照片的联动和样式设置
+        function operInImg(img,src){
+            //获取图片对象
+            img.style.border="solid 1px";
+            //设置大图的img路径
+            //获取大图对象
+            var big =document.getElementById("big");
+            //设置路径
+            big.src='img/'+src;
+
+
+
+
+
+
+       }
+       function operOutImg(img){
+           //获取图片对象
+           img.style.border="";
+       }
+
+    </script>
+
+<style type="text/css">
+    #showdiv{
+        width: 800px;
+        height: 440px;
+        border: 1px solid black;
+        border-radius:20px;
+      margin: 0 auto;
+    }
+#ta{
+    margin: auto;
+    margin-top: 10px;
+}
+
+</style>
+
+</head>
+<body>
+<div id="showdiv">
+        <table  width="270px" id="ta">
+            <tr height="300px">
+                <td colspan="5" align="center"><img src="img/s2.jpg" alt="" id="big"></td>
+            </tr>
+            <tr height="60px">
+                <td><img src="img/x1.jpg" alt="" onmousemove="operInImg(this,'s1.jpg')" onmouseout="operOutImg(this)"></td>
+                <td><img src="img/x2.jpg" alt="" onmousemove="operInImg(this,'s2.jpg')"onmouseout="operOutImg(this)"></td>
+                <td><img src="img/x3.jpg" alt="" onmousemove="operInImg(this,'s3.jpg')"onmouseout="operOutImg(this)"></td>
+                <td><img src="img/x4.jpg" alt="" onmousemove="operInImg(this,'s4.jpg')"onmouseout="operOutImg(this)"></td>
+                <td><img src="img/x5.jpg" alt="" onmousemove="operInImg(this,'s5.jpg')"onmouseout="operOutImg(this)"></td>
+            </tr>
+        </table>
+</div>
+</body>
+</html>

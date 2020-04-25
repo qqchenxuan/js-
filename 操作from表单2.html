@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+         //多选框操作
+                function testCheckBox(){
+                     //获取所有的多选元素对象数组
+                            var favs = document.getElementsByName("fav");
+                     //遍历数组
+                            for(var i=0;i<favs.length;i++){
+                                if(favs[i].checked){
+                                    alert(favs[i].value+":"+favs[i].checked)
+                                }
+
+                            }
+                }
+          //全选
+            function testCheckBox2(){
+                var favs=document.getElementsByName("fav");
+
+                for(var i=0;i<favs.length;i++){
+                    favs[i].checked = true;
+                }
+            }
+           //反选
+         function testCheckBox3(){
+             var favs=document.getElementsByName("fav");
+
+             for(var i=0;i<favs.length;i++){
+                 favs[i].checked = !favs[i].checked;
+             }
+         }
+        //清空
+         function testCheckBox4(){
+             var favs=document.getElementsByName("fav");
+
+             for(var i=0;i<favs.length;i++){
+                 favs[i].checked = false;
+             }
+         }
+
+
+    //操作下拉框
+      function testSel(){
+          //获取下拉框对象
+                  var sel=document.getElementById("address");
+                   // alert(sel.value);
+
+          //获取option对象集合
+          var os=sel.options;
+          for(var i=0;i<os.length;i++){
+              if(os[i].selected){
+              alert(os[i].value+":"+os[i].text)
+              }
+          }
+      }
+    </script>
+
+
+</head>
+<body>
+         <h3>操作表单元素</h3>
+        <hr>
+<b>操作多选框</b>
+         <br/>
+<input type="checkbox" name="fav" id="fav" value="1"/>远走高飞<br/>
+<input type="checkbox" name="fav" id="fav1" value="2"/>当<br/>
+<input type="checkbox" name="fav" id="fav2" value="3"/>李白<br/>
+<input type="checkbox" name="fav" id="fav3" value="4"/>杜甫<br/>
+<input type="checkbox" name="fav" id="fav4" value="5"/>see you again<br/>
+<input type="checkbox"  name="fav" id="fav5" value="6"/>fade<br/>
+
+<input type="button" name="" value="播放" onclick="testCheckBox()"/><br>
+<input type="button" name="" value="全选" onclick="testCheckBox2()"/><br>
+<input type="button" name="" value="反选" onclick="testCheckBox3()"/><br>
+<input type="button" name="" value="清空" onclick="testCheckBox4()"/><br>
+<hr>
+<select name="" id="address" onchange="testSel()">
+    <option value="0">请选择</option>
+    <option value="1">我</option>
+    <option value="2">你</option>
+    <option value="3">她</option>
+
+</select>
+
+</body>
+</html>
